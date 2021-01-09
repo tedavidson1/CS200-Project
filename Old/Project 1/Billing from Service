@@ -1,0 +1,50 @@
+Use Case: Billing from Service
+Context: The provider bills the member for the service provided.
+Actors: Provider
+
+Main Success Scenario:
+1.	The provider opens his/her terminal and enters his/her provider number.
+2.	The provider passes the card through the card reader or types in the member number.
+    2.1  The word “VALIDATED” appears on the screen when the system verifies the card or member number.
+3.	The provider types in the date of the service in the format of MM-DD-YYYY.
+4.	The provider types in the six-digit code corresponding with the service provided.
+    4.1	The software displays the name of the service corresponding to the code (up to 20 characters) and asks the provider to verify his/her choice.
+5.	The provider can optionally enter comments about the service provided up to a maximum of 100 characters.
+6.	The software writes a record of the bill to disk, including the following fields: 
+	* Current date and time (written in MM-DD-YYYY HH:MM:SS) 
+	* Date service was provided (written in MM-DD-YYYY) 
+	* Provider number (up to 9 digits) 
+	* Member number (up to 9 digits) 
+	* Service code (6 digits) 
+	* Comments (optional)
+7.	The software searches the database for the fee to be paid for the chosen service.
+    7.1	That fee is displayed in the provider’s terminal.
+8.	The provider completes a form to verify the transaction by inputting the following fields:
+	* Current date and time
+	* Date the service was provided
+	* Member name and number
+	* Service code
+	* Fee to be paid
+9.	At the end of the week, the provider tallies all the fees from that week and verifies the total.
+
+
+Extensions:
+1a. The provider number is not valid.
+	1b. The system prints an error message.
+    1c. The process returns to step 1.
+2a. The card or member number is not valid.
+	2ab. The system prints an error message.
+	2ac. The process returns to step 2.
+3a. The date entered does not exist or is not in the valid MM-DD-YYYY format.
+	3ab. The system prints an error message.
+	3ac. The process returns to step 3.
+4a. The provider inputs an invalid code.
+	4ab. The system prints an error message.
+	4ac. The process returns to step 5.
+8a. The provider inputs a value for the date the service was provided, the member name and number, service code, and/or total that does not match the previous input.
+	8ab. The system prints an error message.
+	8ac. The process returns to step 9.
+	8ad. If the provider needs to change an input from the initial selection, the system will send the provider back to the appropriate step: 
+		* 3 to re-input the date the service was provided.
+		* 2 to re-input the member number.
+		* 4 to re-input the service code.

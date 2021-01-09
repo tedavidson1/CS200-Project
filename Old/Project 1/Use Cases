@@ -1,0 +1,18 @@
+Possible Use Cases:
+Member Validation
+Billing from Service
+	-Form filling
+Requesting Provider Codes
+Friday Report Production (ChocAn Data Center is the abstract actor)
+	-Manager Version (includes)
+	-Manager Override (extension)
+	-Member Version (includes)
+	-Provider Version (includes)
+		-same info as provider's form
+
+Membership Management
+	-add
+	-delete
+	-update
+
+Verson of this is done for provider's in their system as well

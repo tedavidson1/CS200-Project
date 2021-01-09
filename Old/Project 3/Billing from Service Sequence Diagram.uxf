@@ -1,0 +1,45 @@
+   <diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>110</x><y>40</y><w>60</w><h>110</h></coordinates><panel_attributes>Provider</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>130</x><y>150</y><w>20</w><h>60</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>100</y><w>100</w><h>30</h></coordinates><panel_attributes>login : Login 
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>provider : ProviderTerminal
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>160</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+loginProvider()</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>270</x><y>150</y><w>20</w><h>90</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>100</y><w>140</w><h>30</h></coordinates><panel_attributes>billChocAn : BillChocAn
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>100</y><w>170</w><h>30</h></coordinates><panel_attributes>serviceRecord : ServiceRecord
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1290</x><y>100</y><w>100</w><h>30</h></coordinates><panel_attributes>service : Service
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>920</x><y>450</y><w>20</w><h>440</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>100</y><w>180</w><h>30</h></coordinates><panel_attributes>verifyMember : Verify Member
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>460</x><y>170</y><w>20</w><h>780</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>700</x><y>210</y><w>20</w><h>250</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>480</y><w>470</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+addRecord()</panel_attributes><additional_attributes>450;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1140</x><y>500</y><w>20</w><h>280</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>220</x><y>240</y><w>1220</w><h>540</h></coordinates><panel_attributes>alt
+--
+[memberNumberDNE/memberNumberSuspended]                                                                                                                                                  
+
+
+
+
+
+-.
+
+[memberNumberValid]                                                                                                                                                       
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>190</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+billChocAn()</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>200</y><w>30</w><h>770</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;750</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>270</x><y>880</y><w>20</w><h>70</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>230</y><w>30</w><h>670</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;650</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>120</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>120</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>210</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+verifyMember()</panel_attributes><additional_attributes>230;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>300</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+memberNumberInvalid</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>410</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+memberNumberValid</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>540</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+addRecord()</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1330</x><y>570</y><w>20</w><h>180</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>600</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+Service()</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>670</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>720</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>800</y><w>470</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+logout()</panel_attributes><additional_attributes>10;20;450;20</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>890</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>120</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>120</y><w>30</w><h>350</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1140</x><y>120</y><w>30</w><h>400</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;380</additional_attributes></element><element><id>Relation</id><coordinates><x>1330</x><y>120</y><w>30</w><h>470</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>1330</x><y>740</y><w>30</w><h>230</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;210</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>0</x><y>0</y><w>1440</w><h>950</h></coordinates><panel_attributes>Billing From Service</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>450</y><w>30</w><h>520</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;500</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>880</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1140</x><y>770</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element></diagram>

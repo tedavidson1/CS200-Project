@@ -1,0 +1,2 @@
+Would friday report production be a use case (fully automated)?
+When is ChocAnon billed? It says that the provider bills ChocAnon immediately but also bills at the end of the week.

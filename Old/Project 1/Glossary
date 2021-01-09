@@ -1,0 +1,26 @@
+Glossary:
+Electronic Funds Transfer (EFT)- is the electronic transfer of funds from one bank account to another, without direct
+intervention of banking staff.
+
+Member- people who pay a monthly fee to ChocAn. Have a card and member number used to verify.
+
+Provider- health care professional, provides a service to members. Has a provider number.
+
+Provider Directory- document of six-digit service codes and fees used to denote a service provided.
+May be provided as an email attachment upon request. Alphabetically ordered.
+
+Manager- ChocAn manager. Can individually run reports.
+
+Main Accounting Procedure- Runs on Fridays at midnight at the ChocAn Data Center, with the purpose reading the week's file of
+services provided and prints the number of reports. 
+
+Operators- may add, delete, update member records. The same goes for providers.
+
+ChocAn Data Center- data center for ChocAn, manages records and processes reports.
+
+Main Accounting Procedure- Procedure run at midnight on Friday. It reads the week's file of services provided
+and prints a number of reports. This procedure may be run by a manager at any time for any report.
+This procedure is responsible for writing a record of Electronic Funds Transfers to a disk for banking computers.
+
+Electronic Funds Transfer(EFT)- electronic transfer from one party to another, referring 
+to ChocAn and the providers working with them in this domain.

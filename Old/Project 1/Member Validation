@@ -1,0 +1,17 @@
+Use Case: Member Validation
+Context: In order to receive health care services provided by ChocAn, the member must supply their membership card to the provider. 
+Actors: Provider
+Main Success Scenario:
+1. Provider receives the membership card.
+2. Provider accesses the terminal designed for ChocAn.
+	2.1 Provider must supply the terminal with his or her provider number.
+3. The provider runs the card given to them by the member through the ChocAn terminal. 
+	3.1 The terminal accesses the ChocAn Data Center in order to verify member number.
+4.The word "Validated" appears on the one-line display.
+5. Provider returns membership card to member.
+
+Extensions:
+3a. The membership card swiped by the provider is not verified.
+	3a.1 A reason such as "Invalid Number" or "Membership Suspended" is displayed on terminal screen.
+	3a.2 The Use Case continues at Step 5.
+

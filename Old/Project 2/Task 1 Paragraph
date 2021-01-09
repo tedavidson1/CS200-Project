@@ -1,0 +1,4 @@
+Sections of the ChocAn project that will be computerized include all user and provider storage and management.
+In addition to this, the terminal that operators and managers use to interact with the system will also be computerized.
+The data will be stored in the ChocAn data center. Hardware that will be required is a data center, as well as computers for the ChocAn terminals.
+The ChocAn system developed will interact with other ChocAn designed terminals that providers use. Users will interact with the system through the ChocAn terminals.

@@ -1,0 +1,15 @@
+Use Case: Requesting Provider Directory
+Context: Whenever a Provider wants to access the Provider directory and associated codes, they can request an email of them.
+Actors: Provider
+Main Success Scenario:
+1. Provider desires access to Provider Directory.
+2. Provider uses their terminal to send a request to ChocAn.
+3. ChocAn software verifies the request.
+4. Current Provider Directory is accessed by ChocAn software.
+5. An email is sent to the Provider that requested it with the Provider Directory as an attachment.
+
+Extensions:
+3a. The ChocAn software is unable to verify the request.
+	3a.1 logs the failed request on ChocAn disk.
+	3a.2 email is sent to provider informing them of the failed request with no attachment.
+	3a.3 use case continues on step 2.

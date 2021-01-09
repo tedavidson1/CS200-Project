@@ -1,0 +1,8 @@
+Notes
+- Actor for friday report production
+- Member never interacts directly with system, first with provider who interacts with system
+- Link manager to all the friday reports directly
+- Fix formatting of membership management
+- Membership management, if includes add member, you have to add member?
+- Name in description should match in diagram exactly
+- Stay close to description, every sentence accounted for in diagram

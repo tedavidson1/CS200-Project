@@ -1,0 +1,233 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>440</x><y>640</y><w>260</w><h>200</h></coordinates><panel_attributes>&lt;&lt;ProviderDirectory&gt;&gt;
+--
+-serviceName : string
+-serviceCode : int
+-fee : int
+-directoryName : string
+--
++getServiceName() : string
++setServiceName(newServiceName : string)
++getServiceCode() : int
++setServiceCode(newServiceCode : int)
++getFee() : int
++setFee(newFee : int)
++setAndGetDirectory() : string
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>740</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;ServiceRecord&gt;&gt;
+--
+-ServiceRecord : ArrayList
+--
++traverseRecord(reportType : int) : void
++addRecord() : void
++searchRecord() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1330</x><y>1060</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;ManagerTerminal&gt;&gt;
+--
+
+--
++logout() : void
++produceReport() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>1260</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;OperatorTerminal&gt;&gt;
+--
+
+--
++logout() : void
++manageAccounts() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>1120</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;ProviderTerminal&gt;&gt;
+--
+removed provider control, provider
+ terminal can just access them directly I believe
+--
++logout() : void
++requestProviderDirectory() : void
++verifyMember() : int
++billChocAn() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>1260</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Login&gt;&gt;
+--
+
+--
++loginProvider() : void
++loginManager() : void
++loginOperator() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>920</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;BillChocAn&gt;&gt;
+--
+
+--
++addRecord() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>930</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;RequestingProviderDirectory&gt;&gt;
+--
+
+--
++fetchandemailDirectory() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>940</y><w>250</w><h>140</h></coordinates><panel_attributes>&lt;&lt;VerifyMember&gt;&gt;
+--
+
+--
++verifyMember(checkNumber : int) : int
+include identifier for function
+because we get the user number
+just check database for if 
+that number is there</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>470</y><w>220</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Member&gt;&gt;
+--
+-standing : int
+--
++getStanding() : int
++setStanding(newStanding : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>590</y><w>240</w><h>140</h></coordinates><panel_attributes>&lt;&lt;ProviderDatabase&gt;&gt;
+--
+-ProviderList : ArrayList
+**Note: How to make search be a template**
+--
++addProvider() : bool
++deleteProvider() : bool
++editProvider() : void
++search(wantedProvider : Provider) : int
+-checkExists() : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>740</y><w>280</w><h>110</h></coordinates><panel_attributes>&lt;&lt;ReportCreator&gt;&gt;
+--
+
+--
++makeManagerReport() : void
++makeProviderReport(providerNumber : int) : void
++makeMemberReport(memberNumber : int) : void
++makeAllReports() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1830</x><y>970</y><w>210</w><h>140</h></coordinates><panel_attributes>&lt;&lt;ManageAccounts&gt;&gt;
+--
+
+--
++addProvider() : void
++editProvider() : void
++deleteProvider() : void
++addMember() : void
++editMember() : void
++deleteMember() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>470</y><w>240</w><h>140</h></coordinates><panel_attributes>&lt;&lt;MemberDatabase&gt;&gt;
+--
+-MemberList : ArrayList
+**Note: How to make search be a template**
+--
++addMember() :bool
++deleteMember() : bool
++editMember() : void
++search(wantedMember : Member) : 
+-checkExists(number : int) : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>504</y><w>770</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;750;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>740</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Timer&gt;&gt;
+--
+
+--
+-isFridayMidnight() : bool
+/checks system clock/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>460</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Provider&gt;&gt;
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1470</x><y>544</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1390</x><y>1290</y><w>200</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>1400</x><y>1300</y><w>80</w><h>40</h></coordinates><panel_attributes>Accesses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1500</x><y>1280</y><w>100</w><h>70</h></coordinates><panel_attributes>Logs out to
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1290</x><y>1140</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>130;10;130;100;10;100;10;120</additional_attributes></element><element><id>Text</id><coordinates><x>1350</x><y>1240</y><w>100</w><h>70</h></coordinates><panel_attributes>Accesses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1340</x><y>1160</y><w>100</w><h>70</h></coordinates><panel_attributes>Logs out to
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>1230</y><w>600</w><h>100</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>580;80;10;80;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>1130</x><y>1290</y><w>100</w><h>70</h></coordinates><panel_attributes>Accesses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>640</x><y>1240</y><w>100</w><h>70</h></coordinates><panel_attributes>Logs out to
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1670</x><y>1100</y><w>280</w><h>180</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>260;10;260;90;10;90;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1610</x><y>620</y><w>290</w><h>370</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;270;10;270;350</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>0</y><w>1800</w><h>990</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;470;10;10;1780;10;1780;970</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1240</x><y>20</y><w>270</w><h>400</h></coordinates><panel_attributes>&lt;&lt;Account&gt;&gt;
+--
+-name : string
+-number : int
+-streetAddress : string
+-city : string
+-state : string
+-zip : int
+-age : int
+-email : string
+--
++getName() : string
++setName(newName : string) : void
++getNumber() : int
++setNumber(newNumber : int) : void
++getstreetAddress() : string
++setstreetAddress(newAddress : string) : void
++getCity() : string
++setCity(newCity : string) : void
++getState() : string
++setState(newState : string) : void
++getZip() : int
++setZip(newZip : int) : void
++getAge() : int
++setAge(newAge : int) : void
++getEmail() : string
++setEmail(newEmail : string) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1180</x><y>414</y><w>180</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;160;30;10;30;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1330</x><y>434</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;150;10;150;30</additional_attributes></element><element><id>Relation</id><coordinates><x>1430</x><y>770</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>840</y><w>110</w><h>240</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;180;90;180;90;220</additional_attributes></element><element><id>Relation</id><coordinates><x>1310</x><y>640</y><w>90</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>550</y><w>900</w><h>210</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;880;110;880;190</additional_attributes></element><element><id>Text</id><coordinates><x>920</x><y>520</y><w>100</w><h>110</h></coordinates><panel_attributes>both databases share same relationship, search needs to be public facing
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>770</y><w>200</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>1070</y><w>310</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;110;290;110</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>1010</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>1000</y><w>190</w><h>190</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>170;10;170;170;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>830</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>600</y><w>30</w><h>360</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>820</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>750</y><w>100</w><h>230</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;40;10;40;210;80;210</additional_attributes></element><element><id>Text</id><coordinates><x>1240</x><y>1370</y><w>100</w><h>110</h></coordinates><panel_attributes>May need to connect to provider database to convey concept of valid login
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>2040</x><y>980</y><w>100</w><h>110</h></coordinates><panel_attributes>Include way to know who you are editing/adding/deleting
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>870</y><w>300</w><h>350</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+--
+-DateFiled : string
+-DateProvided : string
+-ProviderNumber : int
+-MemberNumber : int
+-ServiceCode : int
+-Fee : int
+-Comments : string
+--
++getDateFiled() : string
++setDateFiled(newDate : string) : void
++getDateProvided() : string
++setDateProvided(newDateProvided : int) : void
++getProviderNumber() : int
++setProviderNumber(newProviderNumber : int) : void
++getMemberNumber() : int
++setMemberNumber(newMemberNumber : int) : void
++getServiceCode() : int
++setServiceCode(newServiceCode : int) : void
++getFee() : int
++setFee(newFee : int) : void
++getComments() : string
++setComments(newComments : string) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>814</y><w>180</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10;160;60</additional_attributes></element><element><id>Text</id><coordinates><x>1300</x><y>1220</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1680</x><y>1240</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1420</x><y>1150</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1550</x><y>1300</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1400</x><y>1280</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1170</x><y>1310</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>600</x><y>1240</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>610</x><y>1020</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>580</x><y>910</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>570</x><y>1100</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>480</x><y>1160</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>720</x><y>1150</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>230</x><y>1080</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>850</x><y>1010</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>860</x><y>830</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>870</x><y>900</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>230</x><y>610</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>190</x><y>920</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>990</x><y>830</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1110</x><y>850</y><w>40</w><h>40</h></coordinates><panel_attributes>*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1440</x><y>1040</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1360</x><y>860</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1530</x><y>760</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1140</x><y>760</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>990</x><y>780</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1440</x><y>780</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1320</x><y>720</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1190</x><y>670</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1360</x><y>620</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>340</x><y>560</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1940</x><y>1110</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1620</x><y>630</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1980</x><y>950</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1850</x><y>950</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>240</x><y>450</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1490</x><y>550</y><w>100</w><h>70</h></coordinates><panel_attributes>*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1060</x><y>500</y><w>100</w><h>70</h></coordinates><panel_attributes>*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>340</x><y>480</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1450</x><y>570</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>750</x><y>940</y><w>30</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>700</x><y>730</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>600</x><y>1060</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>610</x><y>850</y><w>100</w><h>70</h></coordinates><panel_attributes>Acquires
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>340</x><y>1160</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>230</x><y>750</y><w>70</w><h>50</h></coordinates><panel_attributes>Checks
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>780</x><y>1150</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>830</x><y>860</y><w>100</w><h>70</h></coordinates><panel_attributes>Updates
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>730</x><y>860</y><w>100</w><h>70</h></coordinates><panel_attributes>Checks
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1360</x><y>900</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1460</x><y>780</y><w>100</w><h>70</h></coordinates><panel_attributes>Activate
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1060</x><y>760</y><w>100</w><h>70</h></coordinates><panel_attributes>Accesses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1260</x><y>660</y><w>100</w><h>70</h></coordinates><panel_attributes>Checks
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>680</x><y>600</y><w>100</w><h>70</h></coordinates><panel_attributes>Checks
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1790</x><y>1170</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1880</x><y>740</y><w>100</w><h>30</h></coordinates><panel_attributes>Edits
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>2000</x><y>630</y><w>100</w><h>30</h></coordinates><panel_attributes>Edits
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>600</x><y>860</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>880</y><w>470</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;110;60;10;450;10;450;40</additional_attributes></element><element><id>Text</id><coordinates><x>450</x><y>870</y><w>100</w><h>70</h></coordinates><panel_attributes>Uses
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>810</x><y>900</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>380</x><y>910</y><w>40</w><h>40</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>660</y><w>510</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;490;80</additional_attributes></element><element><id>Text</id><coordinates><x>910</x><y>680</y><w>100</w><h>70</h></coordinates><panel_attributes>Checks
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1140</x><y>710</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>710</x><y>650</y><w>100</w><h>70</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element></diagram>

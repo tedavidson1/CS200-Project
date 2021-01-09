@@ -1,0 +1,80 @@
+Use Case: Friday Report Production
+Context: Every Friday at midnight, the ChocAn Data Center main accounting procedure is run, producing multiple reports.
+Actors: Timer
+Main Success Scenario:
+1. The timer detects that it is midnight on Friday
+2. The Data Center produces the Member reports.
+3. The Data Center produces the Provider reports.
+4. The Data Center produces the Manager summary report.
+5. The system is put back into interactive mode during the day.
+
+
+
+Use Case: Member Report
+Context: One of the reports produced at the ChocAn Data Center.
+Actors: Timer, Manager
+Main Success Scenario:
+1. A manager or the Timer requests the report to be made.
+2. A report is produced for each member containing:
+	-List of services provided, sorted in order of service date
+	- Member name (25 characters)
+	- Member number (9 digits)
+	- Member street address (25 characters)    
+	- Member city (14 characters)   
+	- Member state (2 letters)  
+	 -Member ZIP code (5 digits)
+3. For each service provided, the report also includes:
+	- Date of service, in (MM-DD-YYYY) format
+	- Provider name (25 characters)
+	- Service name (20 characters)
+
+4. The system then sends this report as an email attachment to the corresponding member.
+
+
+
+Use Case: Provider Report
+Context: One of the reports produced at the ChocAn Data Center.
+Actors: Timer, Manager
+Main Success Scenario: 
+1. A manager or the Timer requests the report to be made.
+2. A report is produced for each provider containing:
+
+	- Provider name (25 characters)    
+	- Provider number (9 digits) 
+	- Provider street address (25 characters)  
+	- Provider city (14 characters)   
+	- Provider state (2 letters)   
+	- Provider ZIP code (5 digits)
+3. For each service provided, the report also includes:
+	- Date of service (MM–DD–YYYY)      
+	- Date and time data were received by the computer (MM–DD–YYYY HH:MM:SS)     
+	- Member name (25 characters).        
+	- Member number (9 digits)      
+	- Service code (6 digits)     
+	- Fee to be paid (up to $999.99)  
+	- Total number of consultations with members (3 digits)   
+	- Total fee for week (up to $99,999.99)
+4. A record of electronic funds transfer data is written to a disk, which will
+    be used by banking computers to validate that provider's bank accounts are credited.
+
+5. The report is then emailed as an email attachment to the corresponding provider.
+
+
+
+Use Case: Manager Report
+Context: One of the reports produced at the ChocAn Data Center.
+Actors: Timer, Manager
+Main Success Scenario:
+1. A manager or the Timer requests the report to be made.
+2. A summary report is generated for the manager including the following:
+	- Every provider to be paid for the week
+	- Number of consultations for each provider
+	- Total fee for the week
+
+3. Other details are also provided:
+	- Total number of providers who provided services
+	- Total number of consultations
+	- overall fee total
+
+4. The report is then printed for the manager.
+
